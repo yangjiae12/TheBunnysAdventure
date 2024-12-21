@@ -4,7 +4,11 @@
 *.resS filter=lfs diff=lfs merge=lfs -text
 
 # Force C# files to be detected as C#
-*.cs linguist-language=C#
+*.shad linguist-vendored
+*.go linguist-vendored=false
+*.shader linguist-language=ignore
+*.hlsl linguist-language=ignore
+
 
 # Treat certain files as binary files (prevents line ending conversion)
 *.png binary
