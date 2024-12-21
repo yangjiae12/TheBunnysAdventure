@@ -1,1 +1,23 @@
+# Unity files to be handled by Git LFS
+*.aif filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.resS filter=lfs diff=lfs merge=lfs -text
+
+# Force C# files to be detected as C#
 *.cs linguist-language=C#
+
+# Treat certain files as binary files (prevents line ending conversion)
+*.png binary
+*.jpg binary
+*.fbx binary
+
+# End-of-line handling (set line endings to LF for code files)
+*.cs text eol=lf
+*.shader text eol=lf
+
+# Unity-related files to be excluded from Git LFS
+*.unity merge=unityyamlmerge
+*.meta merge=unityyamlmerge
+
+# Ignore specific files from being added to the Git archive
+*.log export-ignore
